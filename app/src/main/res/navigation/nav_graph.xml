@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/dataPointFragment">
+    <fragment
+        android:id="@+id/dataPointFragment"
+        android:name="com.walletechnologies.contaxt.DataPointFragment"
+        android:label="@string/recentReadings"
+        tools:layout="@layout/fragment_item_list">
+        <action
+            android:id="@+id/action_dataPointFragment_to_sensorDataDetailFragment"
+            app:destination="@id/sensorDataDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.walletechnologies.contaxt.ui.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" />
+    <fragment
+        android:id="@+id/sensorDataDetailFragment"
+        android:name="com.walletechnologies.contaxt.SensorDataDetailFragment"
+        android:label="@string/reading_detail"
+        tools:layout="@layout/sensor_detail_list">
+        <argument
+            android:name="sensorData"
+            app:argType="com.walletechnologies.contaxt.data.model.SensorData" />
+    </fragment>
+</navigation>

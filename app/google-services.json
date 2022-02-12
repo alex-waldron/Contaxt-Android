@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "316983907899",
+    "project_id": "contaxt-bc929",
+    "storage_bucket": "contaxt-bc929.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316983907899:android:d142ede4344dcbe099ae1e",
+        "android_client_info": {
+          "package_name": "com.walletechnologies.contaxt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316983907899-96obvdlurl99illfriqn1b95oo6jh9e5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUr8mtzX6wN4kYA7FRM6dlP1bQ6Obx-9M"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316983907899-96obvdlurl99illfriqn1b95oo6jh9e5.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "316983907899-dbnr8l6t4ei2ou6ih1f4klki08tijti8.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.tinyhacktechnology.Contaxt"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
