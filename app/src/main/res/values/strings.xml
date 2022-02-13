@@ -16,4 +16,6 @@
     <string name="action_list_detail">action_list_detail</string>
     <string name="recentReadings">Contaxt - Recent Readings</string>
     <string name="reading_detail">Contaxt - Reading Detail</string>
+    <string name="login_title_label">Contaxt - Login</string>
+    <string name="signOut">Sign Out</string>
 </resources>

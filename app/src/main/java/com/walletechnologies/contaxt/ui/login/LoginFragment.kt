@@ -15,6 +15,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import com.walletechnologies.contaxt.databinding.FragmentLoginBinding
 
 import com.walletechnologies.contaxt.R
@@ -71,7 +72,9 @@ class LoginFragment : Fragment() {
                     showLoginFailed(it)
                 }
                 loginResult.success?.let {
-                    updateUiWithUser(it)
+
+                    val action = LoginFragmentDirections.actionLoginFragmentToDataPointFragment()
+                    findNavController().navigate(action)
                 }
             })
 
@@ -119,9 +122,10 @@ class LoginFragment : Fragment() {
         Toast.makeText(appContext, welcome, Toast.LENGTH_LONG).show()
     }
 
-    private fun showLoginFailed(@StringRes errorString: Int) {
+    private fun showLoginFailed(errorString: String) {
         val appContext = context?.applicationContext ?: return
-        Toast.makeText(appContext, errorString, Toast.LENGTH_LONG).show()
+        Toast.makeText(appContext, errorString, 5).show()
+
     }
 
     override fun onDestroyView() {
