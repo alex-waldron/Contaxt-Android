@@ -8,6 +8,8 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.navigateUp
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class MainActivity : AppCompatActivity() {
@@ -22,10 +24,25 @@ class MainActivity : AppCompatActivity() {
         val host: NavHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment? ?: return
 
+        val inflater = host.navController.navInflater
+
+        val graph = inflater.inflate(R.navigation.nav_graph)
+        if (Firebase.auth.currentUser != null) {
+            graph.setStartDestination(R.id.dataPointFragment)
+        }else{
+            graph.setStartDestination(R.id.loginFragment)
+        }
+
+        host.navController.graph = graph
         // Set up Action Bar
         val navController = host.navController
 
-        appBarConfiguration = AppBarConfiguration(navController.graph)
+
+        appBarConfiguration = AppBarConfiguration(setOf(
+            R.id.dataPointFragment,
+            R.id.loginFragment
+
+        ))
         setupActionBarWithNavController(navController, appBarConfiguration)
 
     }

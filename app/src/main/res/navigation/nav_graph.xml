@@ -16,8 +16,12 @@
     <fragment
         android:id="@+id/loginFragment"
         android:name="com.walletechnologies.contaxt.ui.login.LoginFragment"
-        android:label="fragment_login"
-        tools:layout="@layout/fragment_login" />
+        android:label="@string/login_title_label"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_dataPointFragment"
+            app:destination="@id/dataPointFragment" />
+    </fragment>
     <fragment
         android:id="@+id/sensorDataDetailFragment"
         android:name="com.walletechnologies.contaxt.SensorDataDetailFragment"
